@@ -14,7 +14,23 @@ const task2 = {
     * *********
      */
     printInFrame: function(srcString, ch) {
-
+        // var words = srcString.split(" ").filter(w=> w !== '')
+        var maxLength = ""
+        for (word of srcString.split(" ")){
+            maxLength = word.length
+        }
+        var words = srcString.split(" ")
+        for (var i = 0; i < words.length-1; i++){
+            while(words[i].length !== maxLength){
+                words[i]+=" "
+            }
+            words[i]=ch+" "+words[i]
+            words[i]+=ch
+        }
+        console.log(words)
+        // for (word1 of srcString.split(" ")){
+        //     console.log(word1)
+        // }
     },
 
     /*
@@ -46,3 +62,4 @@ const task2 = {
 
     }
 };
+task2.printInFrame('This string will be printed in frame', '*')

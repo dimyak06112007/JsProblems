@@ -23,26 +23,14 @@ const task0 = {
     // вернуть максимальное число
     max(a, b, c) {
         let m = a;
-        if (m<b){
-            m=b
-        }
-        if (m<c){
-            m=c
-        }
+        //ваш код тут
         return m;
     },
     //вернуть минимальное число
     min(a, b, c) {
         let m = a;
-        if (m>b){
-            m=b
-        }
-        if (m>c){
-            m=c
-        }
+        //ваш код тут
         return m;
     },
 };
 console.log(task0.safeSum('s',2,3))
-console.log(task0.max(1,3,2))
-console.log(task0.min   (1,3,7))
