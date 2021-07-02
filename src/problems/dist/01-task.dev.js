@@ -145,10 +145,9 @@ var task1 = {
   combine: function combine(array1, array2) {
     var len1 = array1.length;
     var len2 = array2.length;
-    var smaller = "hi";
-    var bigger = "hello";
+    var smaller;
+    var bigger;
     var list = [];
-    var two = true;
 
     if (len1 > len2) {
       smaller = len2;
@@ -158,28 +157,23 @@ var task1 = {
       bigger = len2;
     }
 
-    for (var number = 1; number < smaller; number++) {
-      while (two) {
-        if (number % 2 == 0) {
-          list.push(array2[number - 1]);
-          two = false;
-        } else {
-          list.push(array1[number - 1]);
-          two = true;
-        }
-      }
+    for (var number = 0; number < smaller; number++) {
+      list.push(array1[number]);
+      list.push(array2[number]);
     }
 
     if (len1 === bigger) {
       while (smaller < bigger) {
-        list.push(len1[smaller]);
+        list.push(array1[smaller]);
         smaller++;
       }
     }
 
     if (len2 === bigger) {
+      console.log("in loop");
+
       while (smaller < bigger) {
-        list.push(len2[smaller]);
+        list.push(array2[smaller]);
         smaller++;
       }
     }
@@ -191,4 +185,4 @@ console.log(task1.sumFromOneToN(3));
 console.log(task1.totalSum([1, "sf", true, 3]));
 console.log(task1.includes([1, "sf", true, 3], "sft"));
 console.log(task1.concat(["h", 'e', "l", "l", 'o'], ["h", 'e', 'y']));
-console.log(task1.combine([1, 2, 3], ['a', 'b', 'c', 'd']));
+console.log(task1.combine([1, 2, 3], ['a', 'b', 'c', 'd', 'e']));
