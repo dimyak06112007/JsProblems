@@ -196,6 +196,7 @@ var task3 = {
     console.log(arr2);
 
     for (var iterate = 0; iterate < 4; iterate++) {
+      console.log("new iteration ----------------------------------------------------------------------");
       var _iteratorNormalCompletion7 = true;
       var _didIteratorError7 = false;
       var _iteratorError7 = undefined;
@@ -282,4 +283,4 @@ var task3 = {
 };
 task3.isPalindrome('aba34');
 task3.charCount('hellooo');
-task3.areAnagrams("Yak, went hllo", "Yak. tenw hllo");
+task3.areAnagrams("hellooaba34oYhellooaba34oY", "hellaba34oYoohellooaba34oY");

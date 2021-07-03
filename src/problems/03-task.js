@@ -67,6 +67,7 @@ const task3 = {
         console.log("-----")
         console.log(arr2)
         for (var iterate =0;iterate < 4; iterate++) {
+            console.log("new iteration ----------------------------------------------------------------------")
             for (letter of arr1) {
                 console.log('letter of arr1 ' + letter)
                 for (l2 of arr2) {
@@ -109,4 +110,4 @@ const task3 = {
 };
 task3.isPalindrome('aba34')
 task3.charCount('hellooo')
-task3.areAnagrams("Yak, went hllo", "Yak. tenw hllo")
+task3.areAnagrams("hellooaba34oYhellooaba34oY", "hellaba34oYoohellooaba34oY")
