@@ -1,5 +1,6 @@
 const task4 = {
     httpGetRequest(url, params, callback) {
+        var myRequest = new XMLHttpRequest();
         /**
          * аргументы:
          * url - адрес сервера

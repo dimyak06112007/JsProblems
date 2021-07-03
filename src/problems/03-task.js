@@ -66,38 +66,39 @@ const task3 = {
         console.log(arr1)
         console.log("-----")
         console.log(arr2)
-        for (letter of arr1) {
-            console.log('letter of arr1 ' + letter)
-            for (l2 of arr2) {
-                console.log('letter of arr2')
-                if (letter === l2) {
-                    console.log('they are equal')
-                    var ok = true
-                    for (var i = 0; i < arr1.length; i++) {
-                        if (ok === true) {
-                            console.log('ok = true passed')
-                            if (arr1[i] === letter) {
-                                arr1.splice(i, 1)
-                                ok = false
-                                console.log(arr1)
+        for (var iterate =0;iterate < 4; iterate++) {
+            for (letter of arr1) {
+                console.log('letter of arr1 ' + letter)
+                for (l2 of arr2) {
+                    console.log('letter of arr2')
+                    if (letter === l2) {
+                        console.log('they are equal')
+                        var ok = true
+                        for (var i = 0; i < arr1.length; i++) {
+                            if (ok === true) {
+                                console.log('ok = true passed')
+                                if (arr1[i] === letter) {
+                                    arr1.splice(i, 1)
+                                    ok = false
+                                    console.log(arr1)
+                                }
                             }
                         }
-                    }
-                    var ok = true
-                    for (var i = 0; i < arr2.length; i++) {
-                        if (ok === true) {
-                            if (arr2[i] === letter) {
-                                arr2.splice(i, 1)
-                                ok = false
-                                console.log(arr2)
+                        var ok = true
+                        for (var i = 0; i < arr2.length; i++) {
+                            if (ok === true) {
+                                if (arr2[i] === letter) {
+                                    arr2.splice(i, 1)
+                                    ok = false
+                                    console.log(arr2)
+                                }
                             }
                         }
-                    }
 
+                    }
                 }
             }
         }
-
         if (arr1.length === 0 && arr2.length === 0) {
             console.log(true)
         }
@@ -108,4 +109,4 @@ const task3 = {
 };
 task3.isPalindrome('aba34')
 task3.charCount('hellooo')
-task3.areAnagrams("Dima,", "amid.")
+task3.areAnagrams("Yak, went hllo", "Yak. tenw hllo")

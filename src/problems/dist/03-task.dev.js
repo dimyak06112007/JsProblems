@@ -195,43 +195,64 @@ var task3 = {
     console.log("-----");
     console.log(arr2);
 
-    for (var _i = 0, _arr = arr1; _i < _arr.length; _i++) {
-      letter = _arr[_i];
-      console.log('letter of arr1 ' + letter);
+    for (var iterate = 0; iterate < 4; iterate++) {
       var _iteratorNormalCompletion7 = true;
       var _didIteratorError7 = false;
       var _iteratorError7 = undefined;
 
       try {
-        for (var _iterator7 = arr2[Symbol.iterator](), _step7; !(_iteratorNormalCompletion7 = (_step7 = _iterator7.next()).done); _iteratorNormalCompletion7 = true) {
-          l2 = _step7.value;
-          console.log('letter of arr2');
+        for (var _iterator7 = arr1[Symbol.iterator](), _step7; !(_iteratorNormalCompletion7 = (_step7 = _iterator7.next()).done); _iteratorNormalCompletion7 = true) {
+          letter = _step7.value;
+          console.log('letter of arr1 ' + letter);
+          var _iteratorNormalCompletion8 = true;
+          var _didIteratorError8 = false;
+          var _iteratorError8 = undefined;
 
-          if (letter === l2) {
-            console.log('they are equal');
-            var ok = true;
+          try {
+            for (var _iterator8 = arr2[Symbol.iterator](), _step8; !(_iteratorNormalCompletion8 = (_step8 = _iterator8.next()).done); _iteratorNormalCompletion8 = true) {
+              l2 = _step8.value;
+              console.log('letter of arr2');
 
-            for (var i = 0; i < arr1.length; i++) {
-              if (ok === true) {
-                console.log('ok = true passed');
+              if (letter === l2) {
+                console.log('they are equal');
+                var ok = true;
 
-                if (arr1[i] === letter) {
-                  arr1.splice(i, 1);
-                  ok = false;
-                  console.log(arr1);
+                for (var i = 0; i < arr1.length; i++) {
+                  if (ok === true) {
+                    console.log('ok = true passed');
+
+                    if (arr1[i] === letter) {
+                      arr1.splice(i, 1);
+                      ok = false;
+                      console.log(arr1);
+                    }
+                  }
+                }
+
+                var ok = true;
+
+                for (var i = 0; i < arr2.length; i++) {
+                  if (ok === true) {
+                    if (arr2[i] === letter) {
+                      arr2.splice(i, 1);
+                      ok = false;
+                      console.log(arr2);
+                    }
+                  }
                 }
               }
             }
-
-            var ok = true;
-
-            for (var i = 0; i < arr2.length; i++) {
-              if (ok === true) {
-                if (arr2[i] === letter) {
-                  arr2.splice(i, 1);
-                  ok = false;
-                  console.log(arr2);
-                }
+          } catch (err) {
+            _didIteratorError8 = true;
+            _iteratorError8 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion8 && _iterator8["return"] != null) {
+                _iterator8["return"]();
+              }
+            } finally {
+              if (_didIteratorError8) {
+                throw _iteratorError8;
               }
             }
           }
@@ -261,4 +282,4 @@ var task3 = {
 };
 task3.isPalindrome('aba34');
 task3.charCount('hellooo');
-task3.areAnagrams("Dima,", "amid.");
+task3.areAnagrams("Yak, went hllo", "Yak. tenw hllo");
