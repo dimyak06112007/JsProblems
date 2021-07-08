@@ -22,10 +22,10 @@ var task1 = {
 
     try {
       for (var _iterator = array[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-        i = _step.value;
+        var _i2 = _step.value;
 
-        if (typeof i === "number") {
-          sum += i;
+        if (typeof _i2 === "number") {
+          sum += _i2;
           noNumbers = false;
         }
       }
@@ -44,15 +44,10 @@ var task1 = {
       }
     }
 
-    if (noNumbers) {
-      return 0;
-    } else {
-      return sum;
-    }
+    return sum;
   },
   //ф-ция должна возвращать true, если элемент elem присутствует в массиве, иначе false
   includes: function includes(array, elem) {
-    var here = false;
     var _iteratorNormalCompletion2 = true;
     var _didIteratorError2 = false;
     var _iteratorError2 = undefined;
@@ -62,7 +57,7 @@ var task1 = {
         i = _step2.value;
 
         if (i === elem) {
-          here = true;
+          return true;
         }
       }
     } catch (err) {
@@ -79,8 +74,6 @@ var task1 = {
         }
       }
     }
-
-    return here;
   },
   //на входе 2 массива, вернуть массив, в котором будут элементы из этих 2х массивов
   concat: function concat(array1, array2) {

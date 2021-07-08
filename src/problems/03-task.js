@@ -5,16 +5,25 @@ const task3 = {
     isPalindrome('aabbaa') => true;
      */
     isPalindrome: function (str) {
-        var reverse = ''
-        for (i of str) {
-            reverse = i + reverse
+        const lenOfStr= str.length
+        for(let i =  0; i<lenOfStr; i++){
+            if(str[i]===str[lenOfStr-i-1]){
+                continue
+            }else{
+                return false
+            }
         }
-        if (reverse === str) {
-            console.log(true)
-        }
-        else {
-            console.log(false)
-        }
+        return true
+        // var reverse = ''
+        // for (i of str) {
+        //     reverse = i + reverse
+        // }
+        // if (reverse === str) {
+        //     console.log(true)
+        // }
+        // else {
+        //     console.log(false)
+        // }
     },
 
     /*
@@ -22,12 +31,8 @@ const task3 = {
     charCount('Hello') => H: 1, e: 1, l: 2, o: 1
      */
     charCount: function (str) {
-        var outputStr = ''
-
-        var list_of_numbers_that_alredy_were = []
+        var outputStr = new Object()
         for (i of str) {
-            var was_not_the_same_letter = true
-            var repeat = 0
             for (r of str) {
                 if (i === r) {
                     repeat += 1
@@ -108,6 +113,6 @@ const task3 = {
         }
     },
 };
-task3.isPalindrome('aba34')
-task3.charCount('hellooo')
-task3.areAnagrams("hellooaba34oYhellooaba34oY", "hellaba34oYoohellooaba34oY")
+console.log(task3.isPalindrome('aba'))
+// task3.charCount('hellooo')
+// task3.areAnagrams("hellooaba34oYhellooaba34oY", "hellaba34oYoohellooaba34oY")

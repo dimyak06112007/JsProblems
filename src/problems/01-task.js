@@ -13,29 +13,25 @@ var task1 = {
     totalSum: function (array) {
         let sum = 0
         let noNumbers = true
-        for (i of array) {
+        for (let i of array) {
             if (typeof i === "number") {
                 sum += i
                 noNumbers = false
             }
-        }
-        if (noNumbers) {
-            return 0
-        }
-        else {
-            return sum
-        }
+        }  
+        return sum
+        
     },
 
     //ф-ция должна возвращать true, если элемент elem присутствует в массиве, иначе false
     includes: function (array, elem) {
-        let here = false
         for (i of array) {
             if (i === elem) {
-                here = true
+                return true
+                
             }
         }
-        return here
+        
     },
 
     //на входе 2 массива, вернуть массив, в котором будут элементы из этих 2х массивов
