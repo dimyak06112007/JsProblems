@@ -31,24 +31,22 @@ const task3 = {
     charCount('Hello') => H: 1, e: 1, l: 2, o: 1
      */
     charCount: function (str) {
-        var outputStr = new Object()
-        for (i of str) {
-            for (r of str) {
-                if (i === r) {
-                    repeat += 1
+        let outputStr = new Object()
+        for(let letter of str){
+            let didntRepeat = true
+            for(let obj in outputStr){
+                if(obj === letter){
+                    console.log("match")             
+                    didntRepeat = false
+                    outputStr[obj]+=1
                 }
             }
-            for (w of list_of_numbers_that_alredy_were) {
-                if (i === w) {
-                    was_not_the_same_letter = false
-                }
+            if(didntRepeat){
+                console.log(letter)
+                outputStr[letter]= 1
             }
-            if (was_not_the_same_letter) {
-                outputStr += `${i}: ${repeat}, `
-            }
-            list_of_numbers_that_alredy_were.push(i)
         }
-        console.log(outputStr)
+        return outputStr
     },
 
     /*
@@ -113,6 +111,6 @@ const task3 = {
         }
     },
 };
-console.log(task3.isPalindrome('aba'))
-// task3.charCount('hellooo')
+// console.log(task3.isPalindrome('aba'))
+console.log(task3.charCount('hellooo'))
 // task3.areAnagrams("hellooaba34oYhellooaba34oY", "hellaba34oYoohellooaba34oY")
